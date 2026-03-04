@@ -118,7 +118,7 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
   font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem);
   margin: 0 0 1rem; letter-spacing: .2px;
 }
-.lead{ color: #ffffff; max-width: 200ch; }
+.lead{ color: #ffffff; max-width: 500ch; }
 
 /* Hero */
 .hero{
