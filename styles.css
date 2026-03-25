@@ -242,6 +242,23 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
   margin: 0 0 1rem; letter-spacing: .2px;
 }
 .lead{ color: #ffffff; max-width: 500ch; font-size:20px; }
+.about-section {
+  perspective: 1000px;
+}
+
+.about-animate {
+  opacity: 0;
+  transform: translateY(40px) rotateX(12deg);
+  transform-origin: center top;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: opacity, transform;
+}
+
+.about-animate.show {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
 
 /* Hero */
 .hero{
