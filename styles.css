@@ -287,26 +287,129 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
 /* Cards (Projects) */
 
 .grid{
-  display: grid; gap: 1.2rem;
+  display: grid;
+  gap: 1.5rem;
 }
+
 .cards{
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-.card{
-  border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius);
+
+/* کارت flip */
+.flip-card{
+  perspective: 1000px;
+  min-height: 420px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* front */
+.flip-card-front{
+  background: #111;
+}
+
+.flip-card-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.flip-card-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: end;
+  padding: 1.2rem;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.72),
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.08)
+  );
+}
+
+.flip-card-title{
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* back */
+.flip-card-back{
+  transform: rotateY(180deg);
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
-  box-shadow: var(--shadow); display: flex; flex-direction: column; overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-.card-body{ padding: 1.1rem 1.1rem .5rem; }
-.card-title{ margin: 0 0 .35rem; font-size: 1.1rem; }
-.card-text{ color: var(--muted);color: color-mix(in srgb, var(--muted), white 50%); margin: 0 0 .8rem; }
-.card-tags{ list-style: none; padding: 0; margin: 0 0 .6rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+
+.card-body{
+  padding: 1.1rem 1.1rem .5rem;
+}
+
+.card-title{
+  margin: 0 0 .35rem;
+  font-size: 1.1rem;
+}
+
+.card-text{
+  color: var(--muted);
+  color: color-mix(in srgb, var(--muted), white 50%);
+  margin: 0 0 .8rem;
+  line-height: 1.6;
+  text-transform: none;
+}
+
+.card-tags{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 .6rem;
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
 .card-tags li{
-  font-size: .8rem; color: #cfd6e4; border: 1px dashed rgba(255,255,255,.18);
-  padding: .2rem .5rem; border-radius: .6rem; background: rgba(255,255,255,.03);
+  font-size: .8rem;
+  color: #cfd6e4;
+  border: 1px dashed rgba(255,255,255,.18);
+  padding: .2rem .5rem;
+  border-radius: .6rem;
+  background: rgba(255,255,255,.03);
 }
+
 .card-footer{
-  display: flex; gap: .5rem; padding: 0 1.1rem 1.1rem; margin-top: auto; flex-wrap: wrap;
+  display: flex;
+  gap: .5rem;
+  padding: 0 1.1rem 1.1rem;
+  margin-top: auto;
+  flex-wrap: wrap;
 }
 .btn-ghost{
   background: rgba(255,255,255,.06); color: var(--text); border: 1px solid rgba(255,255,255,.1);
