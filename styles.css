@@ -339,7 +339,7 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
   height: 100%;
   object-fit: cover;
   display: block;
-
+  opacity: 0.8; /* 👈 اینجا شفافیت */
 }
 
 .flip-card-overlay{
