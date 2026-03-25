@@ -75,3 +75,21 @@
     }
   });
 })();
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutWrap = document.querySelector(".about-wrap");
+
+  if (!aboutWrap) return;
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        aboutWrap.classList.remove("hidden-on-scroll");
+        observer.unobserve(aboutWrap);
+      }
+    });
+  }, {
+    threshold: 0.25
+  });
+
+  observer.observe(aboutWrap);
+});

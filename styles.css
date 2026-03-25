@@ -262,7 +262,7 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
 /* smooth animation */
 .about-heading,
 .about-text {
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transition: opacity 1.9s ease, transform 1.9s ease;
   will-change: opacity, transform;
 }
 
@@ -280,7 +280,7 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
 /* optional: keep highlights slightly delayed */
 .about-subtitle,
 .about-highlights {
-  transition: opacity 2.9s ease, transform 2.9s ease;
+  transition: opacity 5.9s ease, transform 5.9s ease;
 }
 
 .about-wrap.hidden-on-scroll .about-subtitle,
