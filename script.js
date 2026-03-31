@@ -1,3 +1,4 @@
+
 // Smooth active-link highlighting + progress + back-to-top + mobile nav
 (function(){
   const sections = document.querySelectorAll('main .section, .hero');

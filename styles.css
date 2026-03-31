@@ -32,6 +32,7 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
   line-height: 1.6;
 }
 
+
 /* Containers */
 .container{
   width: min(1200px, 92vw);
@@ -269,12 +270,12 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
 /* hidden state = same idea as the video */
 .about-wrap.hidden-on-scroll .about-heading {
   opacity: 0;
-  transform: translate3d(0, 0, 220px) rotateY(-40deg);
+  transform: translate3d(0, 0, 100px) rotateY(-10deg);
 }
 
 .about-wrap.hidden-on-scroll .about-text {
   opacity: 0;
-  transform: translate3d(0, 0, 220px) rotateY(40deg);
+  transform: translate3d(0, 0, 100px) rotateY(10deg);
 }
 
 /* optional: keep highlights slightly delayed */
@@ -331,9 +332,14 @@ background: radial-gradient(at left bottom, rgba(255, 255, 255, 1.0), rgba(112, 
   /*background:
     linear-gradient(180deg, rgba(255,255,255,.25), rgba(255,255,255,.25)),
     url('assets/no pic.jpg') center/cover no-repeat,
-    #0e121c;
-  border: 1px solid rgba(255,255,255,.1);
-  box-shadow: var(--shadow);*/
+    #0e121c;*/
+  /*border: 1px solid rgba(255,255,255,.1);*/
+  /*box-shadow: var(--shadow);*/
+}
+img.framed {
+  box-shadow:
+    -50px -50px 0 -40px #EDE7FE,
+    50px 50px 0 -40px #EDE7FE;
 }
 .scroll-hint{
   display: inline-block; margin-top: 2rem; color: var(--muted); text-decoration: none;
