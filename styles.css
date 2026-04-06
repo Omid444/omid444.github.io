@@ -511,46 +511,53 @@ img.framed {
 .btn-ghost:hover{ background: rgba(255,255,255,.12); }
 
 /* Skills */
-.skills-grid{
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: .9rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
 }
-.skill{
-  display: flex; align-items: center; gap: .6rem;
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 160px;
-  height: 160px;
+
+  min-height: 160px;
+  padding: 1.2rem;
+  border-radius: 1rem;
+
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-  border: 1px solid rgba(255,255,255,.08); padding: .9rem 1rem; border-radius: .9rem;
+  border: 1px solid rgba(255,255,255,.08);
 }
-.skill i{
-  font-size: 1.6rem; filter: drop-shadow(0 6px 12px rgba(0,0,0,.25));
-}
-.skill span{ color: #dfe6f5; font-weight: 600; }
 
 .skill-icon {
-  width: 126px;
-  height: 126px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
+  display: block;
   transition: transform 0.3s ease;
+}
+
+.skill:hover .skill-icon {
+  transform: scale(1.08);
 }
 
 .skill span {
   position: absolute;
-  bottom: -25px; /* یا top: 100% */
+  bottom: 12px;
   left: 50%;
-  transform: translate(-50%, 10px);
-
+  transform: translateX(-50%) translateY(10px);
   opacity: 0;
-  white-space: nowrap;
-
   transition: all 0.3s ease;
+  white-space: nowrap;
+  color: #dfe6f5;
+  font-weight: 600;
 }
 
 .skill:hover span {
   opacity: 1;
-  transform: translateY(-50%,0);
+  transform: translateX(-50%) translateY(0);
 }
 /* Contact */
 .contact-card{
